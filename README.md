@@ -1,0 +1,2 @@
+# _LaTeX_-Tutorial
+Apresenta um tutorial para escrever artigos acadêmicos em _LaTeX_, ensinando detalhadamente como utilizar pacotes e formatar texto. Ensina-se customização de elementos textuais e formulação matemática básica. Ensina-se a fazer referências bibliográficas de forma automatizada em normas da ABNT e, alternativamente, em normas internacionais. Além disso, oferece-se um tutorial básico de formatar gráficos e imagens com o _Tikz_. Contém um exemplo de como exportar _outputs_ do _RStudio_ pelo pacote _stargazer_.
