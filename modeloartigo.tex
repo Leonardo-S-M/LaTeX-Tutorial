@@ -1,0 +1,241 @@
+\documentclass[a4paper]{article} %seleciona tipo de documento e tamanho de folha
+
+\usepackage[left=2.75cm,top=2.75cm,right=2.75cm,bottom=2.75cm]{geometry} %define margens
+\usepackage[utf8]{inputenc} %Codificacao do documento (conversão automática dos acentos)
+\usepackage[brazil]{babel} % Define língua como português-BR
+%\usepackage[english]{babel} % Define língua como inglês
+\usepackage{amsmath} %pacote para auxiliar a edição e formatação de fórmulas matemáticas 
+\usepackage{tikz} %permite criação e edição de imagens
+\usepackage{graphicx} %auxilia na criação e edição de imagens
+\usepackage{pgfplots} %auxilia na criação e edição de imagens
+\usepackage{amsthm} %pacote para auxiliar a edição e formatação de fórmulas matemáticas 
+\usepackage{amssymb} %pacote para auxiliar a edição e formatação de fórmulas matemáticas 
+\usepackage{listings} %inserir códigos de programação
+\usepackage{lmodern} %Define fonte
+\usepackage[T1]{fontenc} %define codificações de fonte 	
+\usepackage{indentfirst} %espaço no início do parágrafo
+\usepackage{nomencl} %permite formação de uma nomenclatura
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref} %formata estilo de link e referência
+\hypersetup{colorlinks,	citecolor=blue,	linkcolor=blue} %define cor de referência e link
+\usepackage{microtype} %para melhorias de justificação
+\usepackage{amsfonts} %símbolos matemáticos extas
+\usepackage{enumitem} %estilo de itens
+\usepackage{comment} %facilita adição de comentários no texto
+\usepackage{float} %edição de texto e espaços
+\usepackage{titlesec} %formata título de seção
+%\usepackage[printwatermark]{xwatermark} %Define marca d'água
+%\newwatermark[allpages,color=purple!50,angle=60,scale=4,xpos=0,ypos=0]{RASCUNHO} %Configurações da marca d'água
+
+\titleformat*{\section}{\normalsize\bfseries} %coloca título de seção em negrito e tamanho normal
+% NOTA: USAR \bfseries e não \textbf. \textbf é comando específico, \bfseries é geral
+\titleformat*{\subsection}{\normalsize\bfseries} %coloca título de subseção em negrito e tamanho normal
+\titleformat*{\subsubsection}{\normalsize\bfseries} %coloca título de subsubseção em negrito e tamanho normal
+
+%\usepackage[backend=bibtex]{biblatex} %citação numérica
+%\usepackage[style=alphabetic]{biblatex} %citação alfabética (inglês)
+\usepackage[alf,.abnt-emphasize=bf]{abntex2cite} %Citações em português padrão ABNT
+
+%\bibliography{bibmodelo}
+
+
+% Author info
+\title{Formatação de Artigos com \LaTeX\thanks{O autor gostaria de agradecer à CAPES (Coordenação de Aperfeiçoamento de Pessoal de Nível Superior) pelo apoio financeiro.}}
+\author{Leonardo Schmitz Mosca\thanks{Mestre em Desenvolvimento Econômico pelo PPGDE-UFPR. Doutorando em Economia Aplicada pelo PPGEA-UFJF.}}
+	
+%\and Fulano\thanks{Coautor.} %Adiciona coautor se inserido dentro do comando \author{}
+
+
+\begin{document}
+	\maketitle
+	\begin{abstract}
+		\noindent %comando para não gerar espaço de parágrafo
+		Este modelo de artigo oferece uma plataforma flexível de escrita acadêmica para iniciantes na linguagem \LaTeX. \\ %quebra linha sem formar parágrafo
+		\textbf{Palavras-chave:} Modelo, Artigo, \textit{LaTeX}.
+	\end{abstract}
+\vspace{15cm}
+\pagebreak %Comando de quebra de página
+
+\tableofcontents %Faz o sumário
+\pagebreak
+\section{Formatação básica, equações e referências intra-artigo} \label{S1}
+\subsection{Formatação Básica} \label{SS11}
+Neque laoreet suspendisse interdum consectetur\footnote{Insere nota de rodapé.}. Viverra\footnote[99]{Insere nota de rodapé com número personalizado, sem afetar as demais.} mauris in aliquam sem fringilla ut morbi. Pharetra\footnote{Exemplo.} pharetra massa massa ultricies mi quis. Mauris augue neque gravida in fermentum et sollicitudin ac orci. Urna nunc id cursus metus. Amet consectetur adipiscing elit ut aliquam purus sit. Lacus suspendisse faucibus interdum posuere lorem ipsum dolor. Amet aliquam id diam maecenas ultricies. Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at. Amet est placerat in egestas erat imperdiet sed euismod nisi. Odio aenean sed adipiscing diam donec adipiscing. Vivamus arcu felis bibendum ut tristique et egestas. Eget aliquet nibh praesent tristique. Scelerisque varius morbi enim nunc faucibus. Facilisis volutpat est velit egestas dui id ornare. Bibendum enim facilisis gravida neque convallis a. Non quam lacus suspendisse faucibus interdum posuere lorem. Orci eu lobortis elementum nibh. Vitae congue eu consequat ac. \par %comando para gerar parágrafo
+\begin{quote}
+Insere citação direta dentro do texto.
+\end{quote}
+Consequat mauris nunc congue nisi vitae suscipit tellus mauris a. Ac turpis egestas integer eget aliquet nibh praesent tristique magna. Lacinia at quis risus sed vulputate odio ut enim blandit. Dictum sit amet justo donec enim. Tellus molestie nunc non blandit massa enim. Cras sed felis eget velit. Sed augue lacus viverra vitae congue eu consequat ac felis. Donec ultrices tincidunt arcu non sodales neque sodales ut etiam. Nunc aliquet bibendum enim facilisis gravida neque convallis a. Orci a scelerisque purus semper. Elementum curabitur vitae nunc sed velit dignissim sodales ut eu. Commodo elit at imperdiet dui accumsan sit. Hac habitasse platea dictumst quisque sagittis purus sit. \par 
+Para inserir tópicos:
+\begin{itemize}
+\item Tópico 1 
+\item Tópico 2
+\item Tópico 3
+\end{itemize}
+Para inserir tópicos numerados:
+\begin{enumerate}
+\item Tópico 1
+\item Tópico 2
+\item Tópico 3
+\end{enumerate}
+Tópicos em estilo romano:
+\begin{enumerate}[label=(\Roman*)]
+\item A
+\item B
+\item C
+\end{enumerate}
+\subsection{Equações} \label{SS12}
+Para facilitar a edição de equações, recomenda-se o site \url{https://www.codecogs.com/latex/eqneditor.php?lang=pt-br} onde clica-se no símbolo desejado para se obter o código.
+\begin{equation} %Equação numerada
+	\label{eq1}
+	y_{i,t} = \beta_{1} x_{i,t} + \beta_{2} z_{i,t} + \epsilon_{i,t}
+\end{equation}
+Para adicionar símbolos matemáticos fora do ambiente "\textit{equation}", inserir o termo entre \$ \$. Segundo a Equação \ref{eq1} $\beta_{1}$ será...  \par 
+Para fazer uma equação não numerada, utiliza-se o símbolo $*$ no código.
+\begin{equation*}
+	y_{i,t} = \beta_{1} x_{i,t} + \beta_{2} z_{i,t} + \epsilon_{i,t}
+\end{equation*}
+Exemplo de equação com alguns operadores. Para gerar espaços dentro da equação, utilizar$\;$(espaço grande) ou$\:$(espaço pequeno).
+\begin{equation} \label{eq2}
+\int_{0}^{\infty} e^{x}\: dx + \sum_{n}^{\infty} \gamma \times z - \frac{z^{n}}{\sqrt[n]{\frac{w}{z}}}
+\end{equation}
+Formatando um sistema de equações:
+{\begin{center} $x$(t) = $\begin{cases}
+			& \text{ $x = 0$ se } t < t_{1}\\ 
+			& \text{ $x >  0$ se } t\geq t_{2} 
+		\end{cases}$ \par \end{center}
+Exemplo com sistema de equações numerado:
+\begin{equation}
+	\left\{\begin{array}{@{}l@{}}
+		\frac{\sigma}{16} \times z = \xi \times w\\
+		\rho + k \times \frac{w}{x+y} + \Delta \xi \times x=1
+	\end{array}\right.\,
+\end{equation}
+Formatando matrizes (exemplo retirado de \url{https://tex.stackexchange.com/questions/204621/matrix-in-latex}): \\
+\[
+\begin{bmatrix}
+	x_{11}       & x_{12} & x_{13} & \dots & x_{1n} \\
+	x_{21}       & x_{22} & x_{23} & \dots & x_{2n} \\
+	\hdotsfor{5} \\
+	x_{d1}       & x_{d2} & x_{d3} & \dots & x_{dn}
+\end{bmatrix}
+=
+\begin{bmatrix}
+	x_{11} & x_{12} & x_{13} & \dots  & x_{1n} \\
+	x_{21} & x_{22} & x_{23} & \dots  & x_{2n} \\
+	\vdots & \vdots & \vdots & \ddots & \vdots \\
+	x_{d1} & x_{d2} & x_{d3} & \dots  & x_{dn}
+\end{bmatrix}
+\]
+\subsection{Referências intra-artigo} \label{SS13}
+Na seção \ref{S1}, apresentou-se uma maneira básica de editar textos e equações no \LaTeX, respectivamente nas subseções \ref{SS11} e \ref{SS12}. Na Seção \ref{S2}, será apresentada uma maneira de se fazer referência a textos acadêmicos pelas normas ABNT (Associação Brasileira de Normas Técnicas), (subseção \ref{SS21}) e em um formato básico para artigos internacionais (subseção \ref{SS22}). Já na Seção \ref{S3}, é descrito como se adicionar figuras e tabelas em um documento .tex. Há um exemplo de como apresentar códigos de programação no Apêndice \ref{AP:A}.
+\section{Exemplo de citação} \label{S2} %codifica seção
+O melhor a se fazer é decidir de antemão qual será o estilo de citação empregado, para artigos em português em publicações nacionais, recomenda-se o pacote \textit{abntex2cite}. Já para trabalhos voltados para publicações internacionais, recomenda-se o pacote \textit{biblatex}. Trocar de estilo de referência em um documento é possível, mas pode ser relativamente complexo.
+\subsection{Citações em português ABNT} \label{SS21}
+Citação direta, \cite{tirole_theory_1988, belleflamme_industrial_2015, anton_acquisitions_2018}. \par 
+Citação indireta \citeonline{tirole_theory_1988}, \citeonline{belleflamme_industrial_2015}, \citeonline{anton_acquisitions_2018}.
+\subsection{Citações em inglês} \label{SS22} 
+%Citação numérica, \cite{anton_acquisitions_2018}, \cite{tirole_theory_1988}, \cite{belleflamme_industrial_2015}.
+\section{Figuras e Tabelas} \label{S3}
+\subsection{Figuras} \label{S31}
+Para se adicionar figuras no TeXstudio, seleciona-se um arquivo PDF ou de imagem indo em: Assitentes $\rightarrow$ Inserir imagem.
+\begin{figure} [H]
+	\centering
+	\caption{Relação entre Raiva e tempo de experiência com \textit{LaTeX} e \textit{Word}}
+	\includegraphics[width=0.55\linewidth]{"Imagens com Tikz/eximagem"} \hspace{80mm}
+	Fonte: Elaboração própria com dados de vozes na minha cabeça.
+	\label{fig1}
+\end{figure}
+\begin{figure} [H]
+	\caption{Exemplo de fluxograma}
+	\centering
+	\includegraphics[width=0.55\linewidth]{"Imagens com Tikz/fluxograma"} \hspace{80mm}
+	Fonte: Adaptado de \url{https://texample.net/tikz/examples/assignment-structure/}
+	\label{fig2}
+\end{figure}
+\subsection{Tabelas} \label{S32}
+Para facilitar a edição de tabelas, recomenda-se o site \url{https://www.tablesgenerator.com}. É possível exportar planilhas no formato .csv para facilitar a geração da tabela.
+\begin{table}[H]
+	\centering
+	\caption{Exemplo de tabela}
+	\label{T1} 
+	\begin{tabular}{lll}
+		\hline
+		Ano & Renda       & Consumo          \\ \hline
+		1   & 1000        & 800              \\
+		2   & 1100        & 840              \\
+		3   & 1210        & 882              \\
+		4   & 1331        & 926,1            \\
+		5   & 1464,1      & 972,405          \\
+		6   & 1610,51     & 1021,02525       \\
+		7   & 1771,561    & 1072,0765125     \\
+		8   & 1948,7171   & 1125,680338125   \\
+		9   & 2143,58881  & 1181,96435503125 \\
+		10  & 2357,947691 & 1241,06257278281 \\
+		\hline
+	\end{tabular} \hspace{80mm}
+	Fonte: Elaboração própria.
+\end{table}
+Para reportar os resultados de uma regressão (como na Tabela \ref{T2}), é possível exportá-los diretamente do RStudio com o pacote \textit{stargazer}:
+\begin{table}[H] \centering 
+	\caption{Resultados da regressão} 
+	\label{T2} 
+	\begin{tabular}{@{\extracolsep{5pt}}lc} 
+		\\[-1.8ex]\hline 
+		\hline \\[-1.8ex] 
+		& \multicolumn{1}{c}{\textit{Dependent variable: Consumo}} \\ 
+		\cline{2-2} 
+		\\[-1.8ex] & Consumo \\ 
+		\hline \\[-1.8ex] 
+		Renda & 0.325$^{***}$ \\ 
+		& (0.007) \\ 
+		& \\ 
+		Constant & 488.997$^{***}$ \\ 
+		& (11.013) \\ 
+		& \\ 
+		\hline 
+		Observations & 10 \\ 
+		R$^{2}$ & 0.997 \\ 
+		Adjusted R$^{2}$ & 0.996 \\ 
+		Residual Std. Error & 9.128 (df = 8) \\ 
+		F Statistic & 2,368.454$^{***}$ (df = 1; 8) \\ 
+		\hline 
+		\hline \\[-1.8ex] 
+		\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+	\end{tabular} 
+\end{table}
+\section{Considerações Finais}
+Não faça nada do zero.
+\pagebreak
+
+%\printbibliography %para pacote biblatex
+\bibliography{bibmodelo} %para ABNT2cite
+\pagebreak
+
+\appendix %adiciona apêndice
+\section{\textit{Scripts} Utilizados} \label{AP:A}
+Script em linguagem R, adaptado de \url{https://github.com/Leonardo-S-M}
+\begin{lstlisting}[language=R]
+	#Pacotes ------
+	install.packages("stargazer")
+	library(stargazer)
+	#Base de dados -------
+	exlatex <- read.csv("C:/Users/lschm/Desktop/Aula LaTeX/R/exlatex.csv")
+	as.data.frame(exlatex)
+	#Modelo ------
+	modeloexemplo <- lm(Consumo ~ Renda, data=exlatex)
+	summary(modeloexemplo)
+	stargazer(modeloexemplo)
+\end{lstlisting}
+\pagebreak
+\section{\textit{Links} úteis} \label{AP:B}
+Este apêndice oferece \textit{links} úteis para buscar informações, modelos e ferramentas para a melhor utilização do \LaTeX.
+\begin{itemize}
+	\item \url{https://tex.stackexchange.com}
+	\item \url{https://texample.net}
+	\item \url{https://texample.net/tikz/examples/}
+	\item \url{https://latex-tutorial.com}
+	\item \url{https://latex-tutorial.com}
+	\item \url{http://leg.ufpr.br/~walmes/Tikz/}
+	\item \url{https://www.codecogs.com/latex/eqneditor.php?lang=pt-br}
+	\item \url{https://www.tablesgenerator.com}
+\end{itemize}
+\end{document}
